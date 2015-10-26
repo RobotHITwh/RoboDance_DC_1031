@@ -10636,7 +10636,7 @@ initialization:
 	
 	'initialized action
     MOVE G6A, 107, 162,  26, 113,  94,
-    MOVE G6D,  93, 155,  29,  52, 104, 
+    MOVE G6D,  93, 155,  20,  52, 104, 
     MOVE G6B,  98,  23,  93,  ,  ,
     MOVE G6C,  98,  23,  93,  ,  , 
 
@@ -10710,7 +10710,7 @@ donation_ceremony_2_1:
     	MOVE G6C,  13, 188, 140,  ,  ,
     	WAIT
     	
-    	
+    	DELAY 200
 
        'MOVE G6A,  94,  75, 143,  93, 108,
     '   MOVE G6D,  94,  75, 143,  93, 108,
@@ -10720,7 +10720,7 @@ donation_ceremony_2_1:
    '    MOVE G6D, 104,  99, 110, 106, 108,
     '   WAIT
     
-        SPEED 10
+        SPEED 12
     
 	    HIGHSPEED SETOFF
 		FOR I = 1 TO 3
@@ -10887,7 +10887,7 @@ group3:
 	MOVE G6C,  97,  33,  82,  ,  ,  
 	WAIT
 	
-    DELAY 300
+    DELAY 4300
 
     'dapengzhanchi
 
@@ -10930,7 +10930,7 @@ group3:
     MOVE G6B,170, 100, 100
     MOVE G6C,170, 100, 100
     WAIT
-    DELAY 4000
+
 
     'FEIXIAMG *4
 	FOR I = 0 TO 3
@@ -11019,14 +11019,14 @@ opendance:
     SPEED 3
     '×ó¸ì²²Ë®Æ½
     MOVE G6A, 107, 162,  26, 113,  94,
-    MOVE G6D, 100, 155,  33,  55, 104,
+    MOVE G6D, 100, 155,  20,  55, 104,
 	MOVE G6B, 100,  30,  80,  ,  ,  
 	MOVE G6C, 100,  30,  80,  ,  ,  
 	WAIT
 	
 	
     MOVE G6A, 107, 162,  26, 113,  94,
-    MOVE G6D, 100, 155,  33,  55, 104,
+    MOVE G6D, 100, 155,  20,  55, 104,
 	MOVE G6B, 131,  30,  80,  ,  ,  
 	MOVE G6C, 100,  30,  80,  ,  ,  
 	WAIT

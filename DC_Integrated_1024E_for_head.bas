@@ -10637,7 +10637,7 @@ initialization:
 	
 	'initialized action
     MOVE G6A, 107, 162,  26, 113,  94,
-    MOVE G6D, 100, 155,  33,  55, 104,
+    MOVE G6D, 100, 155,  20,  55, 104,
     MOVE G6B,  98,  23,  93,  ,  ,
     MOVE G6C,  98,  23,  93,  ,  ,
     RETURN
@@ -10706,7 +10706,7 @@ donation_ceremony_2_1:
     	MOVE G6B,  13, 190, 136,  ,  ,
     	MOVE G6C,  13, 188, 140,  ,  ,
     	WAIT
-    	
+    	DELAY 200
     	
 
        'MOVE G6A,  94,  75, 143,  93, 108,
@@ -10717,7 +10717,7 @@ donation_ceremony_2_1:
    '    MOVE G6D, 104,  99, 110, 106, 108,
     '   WAIT
     
-        SPEED 10
+        SPEED 12
     
 	    HIGHSPEED SETOFF
 		FOR I = 1 TO 3
@@ -10796,7 +10796,7 @@ donation_ceremony_2_1:
     MOVE G6C, 188,  31,  20,  ,  ,
     WAIT
 
-    SPEED 8
+    SPEED 7
     MOVE G6A,  99, 100,  75, 136, 101,
     MOVE G6D,  95, 102,  73, 134, 104,
     MOVE G6B, 185,  63,  10,  ,  ,
@@ -10838,10 +10838,15 @@ donation_ceremony_2_1:
     WAIT
 
 
+    'MOVE G6A,  99, 100,  75, 136, 101,
+'    MOVE G6D,  95, 102,  73, 134, 104,
+'    MOVE G6B, 188,  91,  72,  ,  ,
+'    MOVE G6C, 188,  91,  76,  ,  ,
+'    WAIT
     MOVE G6A,  99, 100,  75, 136, 101,
     MOVE G6D,  95, 102,  73, 134, 104,
-    MOVE G6B, 188,  91,  72,  ,  ,
-    MOVE G6C, 188,  91,  76,  ,  ,
+    MOVE G6B, 185,  63,  10,  ,  ,
+    MOVE G6C, 190,  60,  10,  ,  ,
     WAIT
 
     MOVE G6A, 101,  66, 122, 132,  99,
@@ -10864,10 +10869,15 @@ donation_ceremony_2_1:
     WAIT
 
 
+    'MOVE G6A,  99, 100,  75, 136, 101,
+'    MOVE G6D,  95, 102,  73, 134, 104,
+'    MOVE G6B, 188,  91,  72,  ,  ,
+'    MOVE G6C, 188,  91,  76,  ,  ,
+'    WAIT
     MOVE G6A,  99, 100,  75, 136, 101,
     MOVE G6D,  95, 102,  73, 134, 104,
-    MOVE G6B, 188,  91,  72,  ,  ,
-    MOVE G6C, 188,  91,  76,  ,  ,
+    MOVE G6B, 185,  63,  10,  ,  ,
+    MOVE G6C, 190,  60,  10,  ,  ,
     WAIT
 '=====================================
     SPEED 8
@@ -11162,14 +11172,14 @@ opendance:
     SPEED 3
     '×ó¸ì²²Ë®Æ½
     MOVE G6A, 107, 162,  26, 113,  94,
-    MOVE G6D, 100, 155,  33,  55, 104,
+    MOVE G6D, 100, 155,  20,  55, 104,
 	MOVE G6B, 100,  30,  80,  ,  ,  
 	MOVE G6C, 100,  30,  80,  ,  ,  
 	WAIT
 	
 	
     MOVE G6A, 107, 162,  26, 113,  94,
-    MOVE G6D, 100, 155,  33,  55, 104,
+    MOVE G6D, 100, 155,  20,  55, 104,
 	MOVE G6B, 131,  30,  80,  ,  ,  
 	MOVE G6C, 100,  30,  80,  ,  ,  
 	WAIT

@@ -10595,6 +10595,7 @@ KEY1:
 	GOSUB opendance
     GOSUB donation_ceremony_2
     GOSUB group3
+    'GOSUB turnaround
     GOTO RX_EXIT
 KEY2:
 	
@@ -10636,7 +10637,7 @@ initialization:
 	
 	'initialized action
     MOVE G6A, 107, 162,  26, 113,  94,
-    MOVE G6D,  93, 155,  29,  52, 104, 
+    MOVE G6D,  93, 155,  20,  52, 104, 
     MOVE G6B,  98,  23,  93,  ,  ,
     MOVE G6C,  98,  23,  93,  ,  , 
 
@@ -10651,8 +10652,8 @@ donation_ceremony_2_1:
 	
 	    HIGHSPEED SETOFF
 	    SPEED 2
-	    MOVE G6A,  94,  75, 143,  90, 108,
-	    MOVE G6D,  94,  75, 143,  90, 108,
+	    MOVE G6A,  94,  75, 143,  92, 108,
+	    MOVE G6D,  94,  75, 143,  92, 108,
 	    MOVE G6B, 107,  55,  99,  ,  ,
 	    MOVE G6C, 107,  55,  99,  ,  ,
 	    
@@ -10710,7 +10711,7 @@ donation_ceremony_2_1:
     	MOVE G6C,  13, 188, 140,  ,  ,
     	WAIT
     	
-    	
+    	DELAY 200
 
        'MOVE G6A,  94,  75, 143,  93, 108,
     '   MOVE G6D,  94,  75, 143,  93, 108,
@@ -10720,7 +10721,7 @@ donation_ceremony_2_1:
    '    MOVE G6D, 104,  99, 110, 106, 108,
     '   WAIT
     
-        SPEED 10
+        SPEED 12
     
 	    HIGHSPEED SETOFF
 		FOR I = 1 TO 3
@@ -10887,7 +10888,7 @@ group3:
 	MOVE G6C,  97,  33,  82,  ,  ,  
 	WAIT
 	
-    DELAY 300
+    DELAY 4300
 
     'dapengzhanchi
 
@@ -10930,7 +10931,7 @@ group3:
     MOVE G6B,170, 100, 100
     MOVE G6C,170, 100, 100
     WAIT
-    DELAY 4000
+   
 
     'FEIXIAMG *4
 	FOR I = 0 TO 3
@@ -11015,18 +11016,18 @@ opendance:
 
     'GOSUB all_motor_mode3
     'chushidongzuo
-     'GOSUB All_motor_mode3
+    'GOSUB All_motor_mode3
     SPEED 3
     '×ó¸ì²²Ë®Æ½
     MOVE G6A, 107, 162,  26, 113,  94,
-    MOVE G6D, 100, 155,  33,  55, 104,
+    MOVE G6D, 100, 155,  20,  55, 104,
 	MOVE G6B, 100,  30,  80,  ,  ,  
 	MOVE G6C, 100,  30,  80,  ,  ,  
 	WAIT
 	
 	
     MOVE G6A, 107, 162,  26, 113,  94,
-    MOVE G6D, 100, 155,  33,  55, 104,
+    MOVE G6D, 100, 155,  20,  55, 104,
 	MOVE G6B, 131,  30,  80,  ,  ,  
 	MOVE G6C, 100,  30,  80,  ,  ,  
 	WAIT
@@ -11170,8 +11171,8 @@ opendance:
 	'MOVE G6B, 102,  37, 104,  ,  ,  
 	'MOVE G6C, 102,  37, 104,  ,  ,  
 	'WAIT
-	MOVE G6A, 100,  31, 129, 146,  96,  
-	MOVE G6D, 101, 132, 135,  39, 103,  
+	MOVE G6A, 100,  31, 129, 147,  96,  
+	MOVE G6D, 101, 132, 135,  40, 103,  
 	MOVE G6B, 102,  37, 104,  ,  ,  
 	MOVE G6C, 102,  37, 104,  ,  ,  
 	WAIT
@@ -11181,8 +11182,8 @@ opendance:
 	'MOVE G6B, 102,  37, 104,  ,  ,  
 	'MOVE G6C, 102,  37, 104,  ,  ,  
 	'WAIT
-	MOVE G6A, 96,  31, 129, 145,  96,  
-	MOVE G6D, 103, 130, 136,  39, 103,  
+	MOVE G6A, 98,  31, 129, 146,  96,  
+	MOVE G6D, 103, 130, 136,  40, 103,  
 	MOVE G6B, 102,  37, 104,  ,  ,  
 	MOVE G6C, 102,  37, 104,  ,  ,  
 	WAIT
@@ -11202,8 +11203,8 @@ opendance:
 	'MOVE G6D,  92,  76, 145,  93, 110,  
 	'MOVE G6B, 102,  37, 104,  ,  ,  
 	'MOVE G6C, 102,  37, 104,  ,  ,  
-	MOVE G6A,  92,  76, 145,  88, 110,  
-	MOVE G6D,  90,  67, 154,  88, 110,  
+	MOVE G6A,  92,  76, 145,  92, 110,  
+	MOVE G6D,  90,  67, 154,  92, 110,  
 	MOVE G6B, 102,  37, 104,  ,  ,  
 	MOVE G6C, 102,  37, 104,  ,  ,  
 
@@ -11289,3 +11290,89 @@ opendance:
     
 
     RETURN
+    
+   turnaround:
+   
+    MOVE G6A, 106, 124,  69, 112,  93,
+    MOVE G6D,  97, 139,  73,  60, 107,
+	MOVE G6B, 155,  33,  20,  ,  ,  
+	MOVE G6C, 155,  33,  20,  ,  ,  
+	WAIT
+    
+	MOVE G6A, 106,  85, 116, 107,  95,
+    MOVE G6D,  95, 102, 154,  45, 106,
+    MOVE G6B, 140,  48,  60,  ,  ,  
+	MOVE G6C, 140,  48,  60,  ,  ,  
+	WAIT
+    
+    
+    
+    
+    
+    
+    'MOVE G6A, 106, 124,  69, 112,  93,
+    'MOVE G6D,  97, 139,  73,  60, 107,
+	'MOVE G6B, 145,  20, 100,  ,  ,  
+	'MOVE G6C, 145,  20, 100,  ,  ,  
+    'WAIT
+    'halfway up
+    'SPEED 7
+	'MOVE G6A, 106,  85, 116, 107,  95,
+    'MOVE G6D,  95, 102, 154,  45, 106,
+	'WAIT
+
+	'MOVE G6A,  97,  16, 129, 159,  96,  
+	'MOVE G6D,  93, 142, 135,  47, 103,  
+	'WAIT
+	'DELAY 200
+	'open leg
+	
+	'MOVE G6A, 100,  31, 129, 159,  96,  
+	'MOVE G6D, 103, 132, 135,  47, 103,  
+	'MOVE G6B, 102,  37, 104,  ,  ,  
+	'MOVE G6C, 102,  37, 104,  ,  ,  
+	'WAIT
+	MOVE G6A, 100,  31, 129, 147,  96,  
+	MOVE G6D, 101, 132, 135,  40, 103,  
+	MOVE G6B, 102,  37, 104,  ,  ,  
+	MOVE G6C, 102,  37, 104,  ,  ,  
+	WAIT
+
+	'MOVE G6A, 99,  31, 129, 154,  96,  
+	'MOVE G6D, 103, 130, 136,  49, 103,  
+	'MOVE G6B, 102,  37, 104,  ,  ,  
+	'MOVE G6C, 102,  37, 104,  ,  ,  
+	'WAIT
+	MOVE G6A, 98,  31, 129, 146,  96,  
+	MOVE G6D, 103, 130, 136,  40, 103,  
+	MOVE G6B, 102,  37, 104,  ,  ,  
+	MOVE G6C, 102,  37, 104,  ,  ,  
+	WAIT
+	'turn around
+    HIGHSPEED SETON 
+    SPEED 15
+    MOVE G6D,100,  76, 145,  93, 100, 100
+    MOVE G6A,100,  76, 145,  93, 100, 100
+    
+ 
+
+	WAIT
+	HIGHSPEED SETOFF
+    'open arm
+    DELAY 175
+    'liuyang MOVE G6A,  92,  76, 145,  93, 110,  
+	'MOVE G6D,  92,  76, 145,  93, 110,  
+	'MOVE G6B, 102,  37, 104,  ,  ,  
+	'MOVE G6C, 102,  37, 104,  ,  ,  
+	MOVE G6A,  92,  76, 145,  92, 110,  
+	MOVE G6D,  90,  67, 154,  92, 110,  
+	MOVE G6B, 102,  37, 104,  ,  ,  
+	MOVE G6C, 102,  37, 104,  ,  ,  
+
+	WAIT
+    
+ 
+ 
+ 	RETURN
+ 	
+	
