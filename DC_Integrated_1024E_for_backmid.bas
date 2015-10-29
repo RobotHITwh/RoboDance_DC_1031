@@ -10593,14 +10593,14 @@ MAIN: '
 
 KEY1:
     GOSUB opendance
-    
     GOSUB donation_ceremony_2
     GOSUB group3
+    GOSUB daybyday
     GOTO RX_EXIT
 KEY2:
-	
-	GOSUB initialization
-	GOTO RX_EXIT
+
+    GOSUB initialization
+    GOTO RX_EXIT
 KEY3:
 KEY4:
 KEY5:
@@ -10634,12 +10634,18 @@ KEY32:
 
     GOTO RX_EXIT
 initialization:
-	
-	'initialized action
-    MOVE G6A, 107, 162,  26, 113,  94,
-    MOVE G6D, 100, 155,  20,  55, 104,
-    MOVE G6B,  98,  23,  93,  ,  ,
-    MOVE G6C,  98,  23,  93,  ,  ,
+    SPEED 3
+    '正面
+    MOVE G6A, 100, 149,  41, 112,  99,
+    MOVE G6D, 101, 170,  58,  76,  99,
+    MOVE G6B, 100,  30,  80,  ,  ,
+    MOVE G6C, 100,  30,  80,  ,  ,
+    WAIT
+    'initialized action侧面
+    'MOVE G6A, 107, 162,  26, 113,  94,
+    '    MOVE G6D, 100, 155,  20,  55, 104,
+    '    MOVE G6B,  98,  23,  93,  ,  ,
+    '    MOVE G6C,  98,  23,  93,  ,  ,
     RETURN
 
 donation_ceremony_2:
@@ -10647,145 +10653,145 @@ donation_ceremony_2:
     RETURN
 
 donation_ceremony_2_1:
-	    GOSUB All_motor_mode3
-	
-	    HIGHSPEED SETOFF
-	    SPEED 2
-	    MOVE G6A,  94,  75, 143,  93, 108,
-	    MOVE G6D,  94,  75, 143,  93, 108,
-	    MOVE G6B, 107,  55,  99,  ,  ,
-	    MOVE G6C, 107,  55,  99,  ,  ,
-	    WAIT
+        GOSUB All_motor_mode3
 
-	    MOVE G6A,  94,  75, 143,  93, 108,
-	    MOVE G6D,  94,  75, 143,  93, 108,
-	    MOVE G6B, 107, 190, 134,  ,  ,
-	    MOVE G6C, 107, 190, 140,  ,  ,
-	    WAIT
+        HIGHSPEED SETOFF
+        SPEED 2
+        MOVE G6A,  94,  75, 143,  93, 108,
+        MOVE G6D,  94,  75, 143,  93, 108,
+        MOVE G6B, 107,  55,  99,  ,  ,
+        MOVE G6C, 107,  55,  99,  ,  ,
+        WAIT
 
-
-	
-	    MOVE G6A,  94,  75, 143,  93, 108,
-	    MOVE G6D,  94,  75, 143,  93, 108,
-	    MOVE G6B,  13, 190, 136,  ,  ,
-	    MOVE G6C,  13, 188, 140,  ,  ,
-	    WAIT
-
-        DELAY 2200
-
-        SPEED 10
-
-    
-    	FOR I = 1 TO 5
-		'边扭屁股边摆手
-        MOVE G6A,  99,  96, 111, 107,  82,  
-		MOVE G6D,  72,  89, 120, 103, 142,  
-		MOVE G6B, 112, 138, 149,  ,  ,  
-		MOVE G6C,  94,  78,  54,  ,  ,  
-		WAIT
-        
-        MOVE G6A,  72,  89, 120, 103, 142,  
-		MOVE G6D,  99,  96, 111, 107,  82,  
-		MOVE G6B, 106,  82,  59,  ,  ,  
-		MOVE G6C, 105, 131, 142,  ,  ,  
-		WAIT
-        NEXT I
+        MOVE G6A,  94,  75, 143,  93, 108,
+        MOVE G6D,  94,  75, 143,  93, 108,
+        MOVE G6B, 107, 190, 134,  ,  ,
+        MOVE G6C, 107, 190, 140,  ,  ,
+        WAIT
 
 
-		MOVE G6D,  72,  89, 120, 103, 142,
-        MOVE G6A,  99,  96, 111, 107,  82,
+
+        MOVE G6A,  94,  75, 143,  93, 108,
+        MOVE G6D,  94,  75, 143,  93, 108,
         MOVE G6B,  13, 190, 136,  ,  ,
         MOVE G6C,  13, 188, 140,  ,  ,
         WAIT
-        
-              
-        SPEED 8
-        MOVE G6A,  94,  75, 143,  93, 108,
-    	MOVE G6D,  94,  75, 143,  93, 108,
-    	MOVE G6B,  13, 190, 136,  ,  ,
-    	MOVE G6C,  13, 188, 140,  ,  ,
-    	WAIT
-    	
-    	DELAY 200
 
-       'MOVE G6A,  94,  75, 143,  93, 108,
+    DELAY 2200
+
+    SPEED 10
+
+
+    FOR I = 1 TO 5
+        '边扭屁股边摆手
+        MOVE G6A,  99,  96, 111, 107,  82,
+        MOVE G6D,  72,  89, 120, 103, 142,
+        MOVE G6B, 112, 138, 149,  ,  ,
+        MOVE G6C,  94,  78,  54,  ,  ,
+        WAIT
+
+        MOVE G6A,  72,  89, 120, 103, 142,
+        MOVE G6D,  99,  96, 111, 107,  82,
+        MOVE G6B, 106,  82,  59,  ,  ,
+        MOVE G6C, 105, 131, 142,  ,  ,
+        WAIT
+    NEXT I
+
+
+    MOVE G6D,  72,  89, 120, 103, 142,
+    MOVE G6A,  99,  96, 111, 107,  82,
+    MOVE G6B,  13, 190, 136,  ,  ,
+    MOVE G6C,  13, 188, 140,  ,  ,
+    WAIT
+
+
+    SPEED 8
+    MOVE G6A,  94,  75, 143,  93, 108,
+    MOVE G6D,  94,  75, 143,  93, 108,
+    MOVE G6B,  13, 190, 136,  ,  ,
+    MOVE G6C,  13, 188, 140,  ,  ,
+    WAIT
+
+    DELAY 200
+
+    'MOVE G6A,  94,  75, 143,  93, 108,
     '   MOVE G6D,  94,  75, 143,  93, 108,
     '   WAIT
-       '
+    '
     '   MOVE G6A,  86,  71, 153,  90, 101,
-   '    MOVE G6D, 104,  99, 110, 106, 108,
+    '    MOVE G6D, 104,  99, 110, 106, 108,
     '   WAIT
-    
-        SPEED 12
-    
-	    HIGHSPEED SETOFF
-		FOR I = 1 TO 3
 
-       'MOVE G6A,  81,  76, 113, 117, 116,
-'       MOVE G6D, 112,  97, 106, 112, 101,
-'		MOVE G6B,  98, 181, 131,  ,  ,  
-'		MOVE G6C,  96, 172, 105,  ,  ,  
-		
-		
-		'MOVE G6A,  77,  76, 108, 127, 116,  
-		'MOVE G6D, 112,  97, 106, 117, 101,  
-		'MOVE G6B,  98, 181, 131,  ,  ,  
-		'MOVE G6C,  96, 172, 105,  ,  ,  
+    SPEED 12
+
+        HIGHSPEED SETOFF
+    FOR I = 1 TO 3
+
+        'MOVE G6A,  81,  76, 113, 117, 116,
+        '       MOVE G6D, 112,  97, 106, 112, 101,
+        '		MOVE G6B,  98, 181, 131,  ,  ,
+        '		MOVE G6C,  96, 172, 105,  ,  ,
 
 
-
-		'MOVE G6A,  80,  78, 139,  98, 101,  
-		'MOVE G6D, 109, 108, 102, 105, 115,  
-		'MOVE G6B,  99, 182, 131,  ,  ,  
-		'MOVE G6C,  97, 173, 106,  ,  ,
-
-		MOVE G6A, 109, 107,  84, 130, 111,  
-		MOVE G6D,  61,  65, 138, 111, 107,  
-		MOVE G6B,  99, 187, 139,  ,  ,  
-		MOVE G6C,  99, 187, 139,  ,  ,  
+        'MOVE G6A,  77,  76, 108, 127, 116,
+        'MOVE G6D, 112,  97, 106, 117, 101,
+        'MOVE G6B,  98, 181, 131,  ,  ,
+        'MOVE G6C,  96, 172, 105,  ,  ,
 
 
 
-        WAIT
-		
-		MOVE G6A,  95, 102,  91, 121, 108,  
-		MOVE G6D,  94, 103,  96, 121, 102,  
-		MOVE G6B,  13, 180, 113,  ,  ,  
-		MOVE G6C,  13, 182, 114,  ,  ,  
-        WAIT
+        'MOVE G6A,  80,  78, 139,  98, 101,
+        'MOVE G6D, 109, 108, 102, 105, 115,
+        'MOVE G6B,  99, 182, 131,  ,  ,
+        'MOVE G6C,  97, 173, 106,  ,  ,
 
-     
-       ' MOVE G6D,  77,  76, 108, 127, 116,  
-		'MOVE G6A, 112,  97, 106, 117, 101,  
-		'MOVE G6C,  98, 181, 131,  ,  ,  
-		'MOVE G6B,  96, 172, 105,  ,  ,  
+        MOVE G6A, 109, 107,  84, 130, 111,
+        MOVE G6D,  61,  65, 138, 111, 107,
+        MOVE G6B,  99, 187, 139,  ,  ,
+        MOVE G6C,  99, 187, 139,  ,  ,
 
-		'MOVE G6D,  80,  78, 139,  98, 101,  
-		'MOVE G6A, 109, 108, 102, 105, 115,  
-		'MOVE G6C,  99, 182, 131,  ,  ,  
-		'MOVE G6B,  97, 173, 106,  ,  ,  
-		
-		MOVE G6A,  61,  65, 138, 111, 107,  
-		MOVE G6D, 109, 107,  84, 130, 111,  
-		MOVE G6B,  99, 187, 139,  ,  ,  
-		MOVE G6C,  99, 187, 139,  ,  ,  
 
 
         WAIT
 
-        MOVE G6A,  95, 102,  91, 121, 108,  
-		MOVE G6D,  94, 103,  96, 121, 102,  
-		MOVE G6B,  13, 180, 113,  ,  ,  
-		MOVE G6C,  13, 182, 114,  ,  ,  
-        
+        MOVE G6A,  95, 102,  91, 121, 108,
+        MOVE G6D,  94, 103,  96, 121, 102,
+        MOVE G6B,  13, 180, 113,  ,  ,
+        MOVE G6C,  13, 182, 114,  ,  ,
+        WAIT
+
+
+        ' MOVE G6D,  77,  76, 108, 127, 116,
+        'MOVE G6A, 112,  97, 106, 117, 101,
+        'MOVE G6C,  98, 181, 131,  ,  ,
+        'MOVE G6B,  96, 172, 105,  ,  ,
+
+        'MOVE G6D,  80,  78, 139,  98, 101,
+        'MOVE G6A, 109, 108, 102, 105, 115,
+        'MOVE G6C,  99, 182, 131,  ,  ,
+        'MOVE G6B,  97, 173, 106,  ,  ,
+
+        MOVE G6A,  61,  65, 138, 111, 107,
+        MOVE G6D, 109, 107,  84, 130, 111,
+        MOVE G6B,  99, 187, 139,  ,  ,
+        MOVE G6C,  99, 187, 139,  ,  ,
+
+
+        WAIT
+
+        MOVE G6A,  95, 102,  91, 121, 108,
+        MOVE G6D,  94, 103,  96, 121, 102,
+        MOVE G6B,  13, 180, 113,  ,  ,
+        MOVE G6C,  13, 182, 114,  ,  ,
+
         WAIT
 
     NEXT I
 
     RETURN
-    
- group3:
-     'kuozhanyundong
+
+group3:
+    'kuozhanyundong
 
 
     SPEED 13
@@ -10811,10 +10817,10 @@ donation_ceremony_2_1:
 
 
     'MOVE G6A,  99, 100,  75, 136, 101,
-'    MOVE G6D,  95, 102,  73, 134, 104,
-'    MOVE G6B, 188,  91,  72,  ,  ,
-'    MOVE G6C, 188,  91,  76,  ,  ,
-'    WAIT
+    '    MOVE G6D,  95, 102,  73, 134, 104,
+    '    MOVE G6B, 188,  91,  72,  ,  ,
+    '    MOVE G6C, 188,  91,  76,  ,  ,
+    '    WAIT
     MOVE G6A,  99, 100,  75, 136, 101,
     MOVE G6D,  95, 102,  73, 134, 104,
     MOVE G6B, 185,  63,  10,  ,  ,
@@ -10843,10 +10849,10 @@ donation_ceremony_2_1:
 
 
     'MOVE G6A,  99, 100,  75, 136, 101,
-'    MOVE G6D,  95, 102,  73, 134, 104,
-'    MOVE G6B, 188,  91,  72,  ,  ,
-'    MOVE G6C, 188,  91,  76,  ,  ,
-'    WAIT
+    '    MOVE G6D,  95, 102,  73, 134, 104,
+    '    MOVE G6B, 188,  91,  72,  ,  ,
+    '    MOVE G6C, 188,  91,  76,  ,  ,
+    '    WAIT
     MOVE G6A,  99, 100,  75, 136, 101,
     MOVE G6D,  95, 102,  73, 134, 104,
     MOVE G6B, 185,  63,  10,  ,  ,
@@ -10879,13 +10885,23 @@ donation_ceremony_2_1:
     MOVE G6C, 188,  91,  76,  ,  ,
     WAIT
 
-    DELAY 400
+    '=====================================
+    SPEED 8
+    MOVE G6A, 102, 102,  90, 117,  99,
+    MOVE G6D,  99, 105,  90, 114,  99,
+    MOVE G6B, 102,  23,  86,  ,  ,
+    MOVE G6C,  97,  33,  82,  ,  ,
+    WAIT
+    '=====================================
+
+    'DELAY 400
     'dunqi
     SPEED 7
     MOVE G6A,  96, 167,  28, 118, 101,
     MOVE G6D,  95, 129,  28, 155, 106,
     MOVE G6B, 109,  42,  73,  ,  ,
     MOVE G6C, 114,  55,  71,  ,  ,
+    WAIT
 
     SPEED 8
     MOVE G6A, 100,  76,  88, 156, 103,
@@ -10927,12 +10943,12 @@ donation_ceremony_2_1:
 
     MOVE G6A, 101,  75, 140,  94,  99,
     MOVE G6D,  99,  75, 142,  93, 100,
-	MOVE G6B, 102,  23,  86,  ,  ,  
-	MOVE G6C,  97,  33,  82,  ,  ,  
+    MOVE G6B, 102,  23,  86,  ,  ,
+    MOVE G6C,  97,  33,  82,  ,  ,
     WAIT
 
 
-    DELAY 4300
+    DELAY 4000
 
     'dapengzhanchi
 
@@ -10975,7 +10991,7 @@ donation_ceremony_2_1:
     MOVE G6B,170, 100, 100
     MOVE G6C,170, 100, 100
     WAIT
-    
+
 
     'FEIXIAMG *4
 
@@ -11032,7 +11048,7 @@ donation_ceremony_2_1:
     WAIT
 
     'FEIXIANG *2
-        '****************
+    '****************
     FOR I = 0 TO 1
         SPEED 6
         MOVE G6D, 90,  98, 145,  54, 115,  100
@@ -11049,7 +11065,7 @@ donation_ceremony_2_1:
         WAIT
 
     NEXT I
-   ' GOSUB fly
+    ' GOSUB fly
     'tiao
 
     '  SPEED 5
@@ -11102,16 +11118,16 @@ donation_ceremony_2_1:
     '
     '    NEXT I
     '    DELAY 300
-   ' ******************
-   ' SPEED 10
-'    MOVE G6D, 90,  98, 145,  54, 115,  100
-'    MOVE G6A,114,  45, 170, 160,  93,  100
-'    MOVE G6B,170, 100, 100
-'    MOVE G6C,170, 100, 100
-'    WAIT
+    ' ******************
+    ' SPEED 10
+    '    MOVE G6D, 90,  98, 145,  54, 115,  100
+    '    MOVE G6A,114,  45, 170, 160,  93,  100
+    '    MOVE G6B,170, 100, 100
+    '    MOVE G6C,170, 100, 100
+    '    WAIT
 
     '****************
-    SPEED 5
+    SPEED 8
     MOVE G6D, 90,  98, 105,  64, 115,  100
     MOVE G6A,114,  45, 170, 160,  93,  100
     MOVE G6B,170, 100, 100
@@ -11119,21 +11135,21 @@ donation_ceremony_2_1:
     WAIT
     GOSUB Leg_motor_mode2
 
-    SPEED 5
+    SPEED 9
     MOVE G6D, 90, 121,  36, 105, 115,  100
     MOVE G6A,113,  64, 146, 138,  93,  100
     MOVE G6B,140,  100,  100
     MOVE G6C,140,  100,  100
     WAIT
 
-    SPEED 4
+    SPEED 7
     MOVE G6D, 85,  98, 105,  115, 115, 100
     MOVE G6A,113,  74, 145,  98,  93, 100
     MOVE G6B,100,  100,  100
     MOVE G6C,100,  100,  100
     WAIT
 
-    SPEED 8
+    SPEED 9
     MOVE G6D, 85,  71, 152,  91, 110, 100
     MOVE G6A,108,  76, 146,  93,  92, 100
     MOVE G6B,100,  70,  80
@@ -11141,15 +11157,12 @@ donation_ceremony_2_1:
     WAIT
 
     GOSUB Leg_motor_mode3
-    SPEED 5
+    SPEED 8
     MOVE G6D,98,  76, 145,  93, 101, 100
     MOVE G6A,98,  76, 145,  93, 101, 100
     MOVE G6B,100,  35,  80
     MOVE G6C,100,  35,  80
     WAIT
-
-
-    GOTO RX_EXIT
 
     RETURN
 
@@ -11160,259 +11173,943 @@ opendance:
 
     'GOSUB all_motor_mode3
     'chushidongzuo
-     GOSUB All_motor_mode3
+    GOSUB All_motor_mode3
     SPEED 3
     '爻佻也水平
-    MOVE G6A, 107, 162,  26, 113,  94,
-    MOVE G6D, 100, 155,  20,  55, 104,
-	MOVE G6B, 100,  30,  80,  ,  ,  
-	MOVE G6C, 100,  30,  80,  ,  ,  
-	WAIT
-	
-	
-    MOVE G6A, 107, 162,  26, 113,  94,
-    MOVE G6D, 100, 155,  20,  55, 104,
-	MOVE G6B, 131,  30,  80,  ,  ,  
-	MOVE G6C, 100,  30,  80,  ,  ,  
-	WAIT
-    
-	MOVE G6B, 159,  30,  80,  ,  ,  
-	MOVE G6C, 100,  30,  80,  ,  ,  
-	WAIT
-	
-	MOVE G6B, 189,  30,  80,  ,  ,  
-	MOVE G6C, 100,  30,  80,  ,  ,  
-	WAIT
-	DELAY 2500
-	'話佻也贌邫
-	SPEED 4
-	   
-	MOVE G6B, 189,  30,  80,  ,  ,  
-	MOVE G6C, 100,  53,  81,  ,  ,  
-	WAIT
-	   
-	MOVE G6B, 189,  30,  80,  ,  ,  
-	MOVE G6C, 100,  84,  82,  ,  ,  
-	WAIT
-	  
-	MOVE G6B, 189,  30,  80,  ,  ,  
-	MOVE G6C, 100, 132,  83,  ,  ,  
-	WAIT
-  
-	MOVE G6B, 189,  30,  80,  ,  ,  
-	MOVE G6C, 100, 187,  83,  ,  ,  
-	WAIT
-	DELAY 500
-	'話佻也水平
-	
-	MOVE G6B, 189,  30,  80,  ,  ,  
-	MOVE G6C, 140, 152,  83,  ,  ,  
-	WAIT
-	
-	MOVE G6B, 189,  30,  80,  ,  ,  
-	MOVE G6C, 150, 107,  83,  ,  ,  
-	WAIT
- 
-	MOVE G6B, 189,  30,  80,  ,  ,  
-	MOVE G6C, 185,  57,  83,  ,  ,  
-	WAIT
-	
-	MOVE G6B, 189,  30,  80,  ,  ,  
-	MOVE G6C, 190,  27,  83,  ,  ,  
-	WAIT
-	'=========================
-	'蹚学袀貐
-	SPEED 3
-	 
-	MOVE G6B, 189,  10,  70,  ,  ,  
-	MOVE G6C, 190,  10,  70,  ,  ,  
-	WAIT
-	DELAY 1000
-	 
-	MOVE G6B, 170,  10,  85,  ,  ,  
-	MOVE G6C, 170,  10,  85,  ,  ,  
-	WAIT
-	
-	MOVE G6B, 145,  20, 100,  ,  ,  
-	MOVE G6C, 145,  20, 100,  ,  ,  
-	WAIT
- 
-	MOVE G6B, 100,  20, 100,  ,  ,  
-	MOVE G6C, 100,  20, 100,  ,  ,  
-	WAIT
-	'双覜蕪邫
-	SPEED 4 
-	MOVE G6B, 100,  50, 100,  ,  ,  
-	MOVE G6C, 100,  50, 100,  ,  ,  
-	WAIT
-	 
-	MOVE G6B, 100,  95, 100,  ,  ,  
-	MOVE G6C, 100,  95, 100,  ,  ,  
-	WAIT
-	
-	MOVE G6B, 100, 135, 100,  ,  ,  
-	MOVE G6C, 100, 135, 100,  ,  ,  
-	WAIT
-	 
-	MOVE G6B, 100, 190, 100,  ,  ,  
-	MOVE G6C, 100, 190, 100,  ,  ,  
-	WAIT
+
+
+    MOVE G6A, 100, 149,  41, 112,  99,
+    MOVE G6D, 101, 170,  58,  76,  99,
+    MOVE G6B, 131,  30,  80,  ,  ,
+    MOVE G6C, 100,  30,  80,  ,  ,
+    WAIT
+
+    MOVE G6B, 159,  30,  80,  ,  ,
+    MOVE G6C, 100,  30,  80,  ,  ,
+    WAIT
+
+    MOVE G6B, 189,  30,  80,  ,  ,
+    MOVE G6C, 100,  30,  80,  ,  ,
+    WAIT
+    DELAY 2500
+    '話佻也贌邫
+    SPEED 4
+
+    MOVE G6B, 189,  30,  80,  ,  ,
+    MOVE G6C, 100,  53,  81,  ,  ,
+    WAIT
+
+    MOVE G6B, 189,  30,  80,  ,  ,
+    MOVE G6C, 100,  84,  82,  ,  ,
+    WAIT
+
+    MOVE G6B, 189,  30,  80,  ,  ,
+    MOVE G6C, 100, 132,  83,  ,  ,
+    WAIT
+
+    MOVE G6B, 189,  30,  80,  ,  ,
+    MOVE G6C, 100, 187,  83,  ,  ,
+    WAIT
+    DELAY 500
+    '話佻也水平
+
+    MOVE G6B, 189,  30,  80,  ,  ,
+    MOVE G6C, 140, 152,  83,  ,  ,
+    WAIT
+
+    MOVE G6B, 189,  30,  80,  ,  ,
+    MOVE G6C, 150, 107,  83,  ,  ,
+    WAIT
+
+    MOVE G6B, 189,  30,  80,  ,  ,
+    MOVE G6C, 185,  57,  83,  ,  ,
+    WAIT
+
+    MOVE G6B, 189,  30,  80,  ,  ,
+    MOVE G6C, 190,  27,  83,  ,  ,
+    WAIT
+    '=========================
+    '蹚学袀貐
+    SPEED 3
+
+    MOVE G6B, 189,  10,  70,  ,  ,
+    MOVE G6C, 190,  10,  70,  ,  ,
+    WAIT
+    DELAY 1000
+
+    MOVE G6B, 170,  10,  85,  ,  ,
+    MOVE G6C, 170,  10,  85,  ,  ,
+    WAIT
+
+    MOVE G6B, 145,  20, 100,  ,  ,
+    MOVE G6C, 145,  20, 100,  ,  ,
+    WAIT
+
+    MOVE G6B, 100,  20, 100,  ,  ,
+    MOVE G6C, 100,  20, 100,  ,  ,
+    WAIT
+    '双覜蕪邫
+    SPEED 4
+    MOVE G6B, 100,  50, 100,  ,  ,
+    MOVE G6C, 100,  50, 100,  ,  ,
+    WAIT
+
+    MOVE G6B, 100,  95, 100,  ,  ,
+    MOVE G6C, 100,  95, 100,  ,  ,
+    WAIT
+
+    MOVE G6B, 100, 135, 100,  ,  ,
+    MOVE G6C, 100, 135, 100,  ,  ,
+    WAIT
+
+    MOVE G6B, 100, 190, 100,  ,  ,
+    MOVE G6C, 100, 190, 100,  ,  ,
+    WAIT
     '双覜袀貐
-	SPEED 3 
-	MOVE G6B, 125, 150,  70,  ,  ,  
-	MOVE G6C, 125, 150,  70,  ,  ,  
-	WAIT
-	
-	MOVE G6B, 155, 100,  55,  ,  ,  
-	MOVE G6C, 155, 100,  55,  ,  ,  
-	WAIT
-	 
-	MOVE G6B, 190,  65,  30,  ,  ,  
-	MOVE G6C, 190,  65,  30,  ,  ,  
-	WAIT
-	  
-	MOVE G6B, 175,  45,  20,  ,  ,  
-	MOVE G6C, 175,  45,  20,  ,  ,  
-	WAIT
-	DELAY 3000
-	SPEED 7
-	MOVE G6A, 106, 124,  69, 112,  93,
-    MOVE G6D,  97, 139,  73,  60, 107,
-	MOVE G6B, 155,  33,  20,  ,  ,  
-	MOVE G6C, 155,  33,  20,  ,  ,  
-	WAIT
-    
-	MOVE G6A, 106,  85, 116, 107,  95,
-    MOVE G6D,  95, 102, 154,  45, 106,
-    MOVE G6B, 140,  48,  60,  ,  ,  
-	MOVE G6C, 140,  48,  60,  ,  ,  
-	WAIT
-    
-    
-    
-    
-    
-    
+    SPEED 3
+    MOVE G6B, 125, 150,  70,  ,  ,
+    MOVE G6C, 125, 150,  70,  ,  ,
+    WAIT
+
+    MOVE G6B, 155, 100,  55,  ,  ,
+    MOVE G6C, 155, 100,  55,  ,  ,
+    WAIT
+
+    MOVE G6B, 190,  65,  30,  ,  ,
+    MOVE G6C, 190,  65,  30,  ,  ,
+    WAIT
+
+    MOVE G6B, 175,  45,  20,  ,  ,
+    MOVE G6C, 175,  45,  20,  ,  ,
+    WAIT
+    DELAY 3000  '***
+    SPEED 4   '***
+
+
+
+
+
     'MOVE G6A, 106, 124,  69, 112,  93,
     'MOVE G6D,  97, 139,  73,  60, 107,
-	'MOVE G6B, 145,  20, 100,  ,  ,  
-	'MOVE G6C, 145,  20, 100,  ,  ,  
+    'MOVE G6B, 145,  20, 100,  ,  ,
+    'MOVE G6C, 145,  20, 100,  ,  ,
     'WAIT
     'halfway up
     'SPEED 7
-	'MOVE G6A, 106,  85, 116, 107,  95,
+    'MOVE G6A, 106,  85, 116, 107,  95,
     'MOVE G6D,  95, 102, 154,  45, 106,
-	'WAIT
+    'WAIT
 
-	'MOVE G6A,  97,  16, 129, 159,  96,  
-	'MOVE G6D,  93, 142, 135,  47, 103,  
-	'WAIT
-	'DELAY 200
-	'open leg
+    'MOVE G6A,  97,  16, 129, 159,  96,
+    'MOVE G6D,  93, 142, 135,  47, 103,
+    'WAIT
+    'DELAY 200
+    'open leg
 
-	MOVE G6A, 100,  31, 129, 159,  96,  
-	MOVE G6D, 103, 132, 135,  47, 103,  
-	MOVE G6B, 102,  37, 104,  ,  ,  
-	MOVE G6C, 102,  37, 104,  ,  ,  
-	WAIT
-	
-	MOVE G6A, 99,  31, 129, 159,  96,  
-	MOVE G6D, 103, 132, 135,  47, 103,  
-	MOVE G6B, 102,  37, 104,  ,  ,  
-	MOVE G6C, 102,  37, 104,  ,  ,  
-	WAIT
-	'turn around
-    HIGHSPEED SETON 
+    MOVE G6A, 100, 105,  96, 107, 100,
+    MOVE G6D, 100, 107,  94, 109,  98,
+    MOVE G6B, 100,  30,  80,  ,  ,
+    MOVE G6C, 100,  30,  80,  ,  ,
+    WAIT
+
+
+    'MOVE G6A, 100,  98,  79, 143, 100,
+    '	MOVE G6D, 100, 101,  75, 143, 100,
+    '	MOVE G6B, 100,  30,  80,  ,  ,
+    '	MOVE G6C, 100,  30,  80,  ,  ,
+    '	WAIT
+
+
+    MOVE G6A, 99,  76, 133, 110, 102,
+    MOVE G6D, 98,  76, 133, 110, 102,
+    MOVE G6B, 100,  30,  80,  ,  ,
+    MOVE G6C, 100,  30,  80,  ,  ,
+    WAIT
+
+    'turn around
+    HIGHSPEED SETON
     SPEED 10
     MOVE G6A,100,  76, 145,  93, 100, 100
     MOVE G6D,100,  76, 145,  93, 100, 100
-	WAIT
-	HIGHSPEED SETOFF
+    WAIT
+    HIGHSPEED SETOFF
     'open arm
     DELAY 175
-    MOVE G6A,  92,  76, 145,  93, 110,  
-	MOVE G6D,  92,  76, 145,  93, 110,  
-	MOVE G6B, 102,  37, 104,  ,  ,  
-	MOVE G6C, 102,  37, 104,  ,  ,  
-	WAIT
-    
- 
- 
- 	DELAY 3000
-	
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    '***************************************************
-  '  MOVE G6A, 107, 162,  26, 113,  94,
-'    MOVE G6D, 100, 155,  33,  55, 104,
-'    MOVE G6B,  98,  23,  93,  ,  ,
-'    MOVE G6C,  98,  23,  93,  ,  ,
-'    WAIT
-'    DELAY 2000
-'
-'    'dun
-'    SPEED 7
-'    MOVE G6A, 107, 162,  26, 113,  94,
-'    MOVE G6D, 100, 155,  33,  55, 104,
-'    MOVE G6B,  98,  23,  93,  ,  ,
-'    MOVE G6C,  98,  23,  93,  ,  ,
-'    WAIT
-'    'halfway up
-'    MOVE G6A, 106, 124,  69, 112,  93,
-'    MOVE G6D,  97, 139,  73,  60, 107,
-'    MOVE G6B,  98,  23,  93,  ,  ,
-'    MOVE G6C,  98,  23,  93,  ,  ,
-'    WAIT
-'    'up
-'    MOVE G6A, 106,  85, 116, 107,  95,
-'    MOVE G6D,  95, 102, 154,  45, 106,
-'    MOVE G6B,  98,  23,  93,  ,  ,
-'    MOVE G6C,  98,  23,  93,  ,  ,
-'    WAIT
-'
-'
-'
-'    'turnaround
-'    
-'    SPEED 15
-''    MOVE G6A,95,  36, 145,  133, 105, 100
-''    MOVE G6D,95,  116, 145,  53, 105, 100
-''    
-''    WAIT
-''
-''
-''    MOVE G6A,90,  36, 145,  133, 105, 100
-''    MOVE G6D,90,  116, 145,  53, 105, 100
-'    
-'	MOVE G6A,  97,  16, 129, 159,  96,  
-'	MOVE G6D,  93, 142, 135,  47, 103,  
-'	MOVE G6B, 100,  30,  80,  ,  ,  
-'	MOVE G6C, 100,  30,  80,  ,  ,  
-'	WAIT
+    MOVE G6A,  92,  76, 145,  93, 110,
+    MOVE G6D,  92,  76, 145,  93, 110,
+    MOVE G6B, 102,  37, 104,  ,  ,
+    MOVE G6C, 102,  37, 104,  ,  ,
+    WAIT
 
-'    HIGHSPEED SETON 
-'    SPEED 13
-'    MOVE G6A,100,  76, 145,  93, 100, 100
-'    MOVE G6D,100,  76, 145,  93, 100, 100
-'    MOVE G6B,100,  30,  80, 100, 100, 100
-'    MOVE G6C,100,  30,  80, 100, 100, 100
-'    WAIT
-'    HIGHSPEED SETOFF
-'    'open arm
-'    DELAY 175
- '   MOVE G6A,  92,  76, 145,  93, 110,  
-'	MOVE G6D,  92,  76, 145,  93, 110,  
-'	MOVE G6B, 102,  37, 104,  ,  ,  
-'	MOVE G6C, 102,  37, 104,  ,  ,  
-'	WAIT
+
+
+    DELAY 3000
+
+
+
+
+
+
+
+
+
+
+
+    '***************************************************
+    '  MOVE G6A, 107, 162,  26, 113,  94,
+    '    MOVE G6D, 100, 155,  33,  55, 104,
+    '    MOVE G6B,  98,  23,  93,  ,  ,
+    '    MOVE G6C,  98,  23,  93,  ,  ,
+    '    WAIT
+    '    DELAY 2000
+    '
+    '    'dun
+    '    SPEED 7
+    '    MOVE G6A, 107, 162,  26, 113,  94,
+    '    MOVE G6D, 100, 155,  33,  55, 104,
+    '    MOVE G6B,  98,  23,  93,  ,  ,
+    '    MOVE G6C,  98,  23,  93,  ,  ,
+    '    WAIT
+    '    'halfway up
+    '    MOVE G6A, 106, 124,  69, 112,  93,
+    '    MOVE G6D,  97, 139,  73,  60, 107,
+    '    MOVE G6B,  98,  23,  93,  ,  ,
+    '    MOVE G6C,  98,  23,  93,  ,  ,
+    '    WAIT
+    '    'up
+    '    MOVE G6A, 106,  85, 116, 107,  95,
+    '    MOVE G6D,  95, 102, 154,  45, 106,
+    '    MOVE G6B,  98,  23,  93,  ,  ,
+    '    MOVE G6C,  98,  23,  93,  ,  ,
+    '    WAIT
+    '
+    '
+    '
+    '    'turnaround
+    '
+    '    SPEED 15
+    ''    MOVE G6A,95,  36, 145,  133, 105, 100
+    ''    MOVE G6D,95,  116, 145,  53, 105, 100
+    ''
+    ''    WAIT
+    ''
+    ''
+    ''    MOVE G6A,90,  36, 145,  133, 105, 100
+    ''    MOVE G6D,90,  116, 145,  53, 105, 100
+    '
+    '	MOVE G6A,  97,  16, 129, 159,  96,
+    '	MOVE G6D,  93, 142, 135,  47, 103,
+    '	MOVE G6B, 100,  30,  80,  ,  ,
+    '	MOVE G6C, 100,  30,  80,  ,  ,
+    '	WAIT
+
+    '    HIGHSPEED SETON
+    '    SPEED 13
+    '    MOVE G6A,100,  76, 145,  93, 100, 100
+    '    MOVE G6D,100,  76, 145,  93, 100, 100
+    '    MOVE G6B,100,  30,  80, 100, 100, 100
+    '    MOVE G6C,100,  30,  80, 100, 100, 100
+    '    WAIT
+    '    HIGHSPEED SETOFF
+    '    'open arm
+    '    DELAY 175
+    '   MOVE G6A,  92,  76, 145,  93, 110,
+    '	MOVE G6D,  92,  76, 145,  93, 110,
+    '	MOVE G6B, 102,  37, 104,  ,  ,
+    '	MOVE G6C, 102,  37, 104,  ,  ,
+    '	WAIT
+
+
+    RETURN
+
+daybyday:
+
+    '
+    GOSUB daybyday1
+    GOSUB All_motor_mode3
+
+
+    GOSUB chatui
+    '        ''DELAY 200
+    ''        G'OSUB niupigu
+    ''        GO'SUB chatui1
+    ''        DELAY 200
+    ''        GOSUB niupigu
+    ''
+    '
+    GOSUB All_motor_mode3
+
+    'GOSUB Recover
+    'GOSUB BeforeLast1
+    GOSUB bow_2
+    'GOSUB Zhanghaipengpose
+
+    RETURN
+
+    '鎭㈠鍔ㄤ綔,閬垮厤鎵撴墜
+
+daybyday1:
+    '**********************鎶栨墜
+    GOSUB Arm_motor_mode3
+    GOSUB Leg_motor_mode3
+
+
+    FOR i=0 TO 0
+        SPEED 7
+
+
+        MOVE G6A, 100,  76, 138, 102, 100,
+        MOVE G6D, 100,  76, 138, 102, 100,
+        MOVE G6B,  59,  15,  39,  ,  ,
+        MOVE G6C,  63,  50,  10,  ,  ,
+
+        MOVE G6B,  56,  36,  35,  ,  ,
+        MOVE G6C,  63,  50,  10,  ,  ,
+        MOVE G6A, 100,  76, 138, 102, 100,
+        MOVE G6D,  95,  76, 137, 102, 107,
+
+        MOVE G6A, 101,  76, 138, 102,  97,
+        MOVE G6D,  90,  76, 137, 102, 113,
+        MOVE G6B,  68,  58,  35,  ,  ,
+        MOVE G6C,  63,  50,  10,  ,  ,
+
+
+
+        MOVE G6A, 105,  76, 138, 102,  93,
+        MOVE G6D,  86,  76, 137, 102, 120,
+
+
+        SPEED 7
+
+
+        MOVE G6B, 122,  71,  12,  ,  ,
+        MOVE G6C,  63,  50,  10,  ,  ,
+
+
+        SPEED 4
+
+        MOVE G6B, 101, 142,  57,  ,  ,10
+        MOVE G6C,  63,  50,  10,  ,  ,
+
+
+        MOVE G6B, 101, 134,  88,  ,  ,
+        MOVE G6C,  63,  50,  10,  ,  ,
+
+
+        MOVE G6B,  94, 114, 125,  ,  ,
+        MOVE G6C,  63,  50,  10,  ,  ,
+
+
+        MOVE G6B,  95,  99,  90,  ,  ,
+        MOVE G6C,  63,  50,  10,  ,  ,
+        '
+        '
+        ''****
+        MOVE G6B, 122,  71,  12,  ,  ,100
+        MOVE G6C,  63,  50,  10,  ,  ,
+        MOVE G6A, 101,  76, 138, 102,  97,
+        MOVE G6D,  90,  76, 137, 102, 113,
+
+
+
+        MOVE G6B,  68,  58,  35,  ,  ,
+        MOVE G6C,  63,  50,  10,  ,  ,
+        MOVE G6A, 100,  76, 138, 102, 100,
+        MOVE G6D,  95,  76, 137, 102, 107,
+
+        MOVE G6B,  56,  36,  35,  ,  ,
+        MOVE G6C,  63,  50,  10,  ,  ,
+
+        MOVE G6B,  59,  15,  39,  ,  ,
+        MOVE G6C,  63,  50,  10,  ,  ,
+        MOVE G6A, 100,  76, 138, 102, 100,
+        MOVE G6D, 100,  76, 138, 102, 100,
+
+
+        ''***********secend**********
+        MOVE G6D, 100,  76, 138, 102, 100,
+        MOVE G6A, 100,  76, 138, 102, 100,
+        MOVE G6C,  59,  15,  39,  ,  ,
+        MOVE G6B,  63,  50,  10,  ,  ,
+
+        MOVE G6C,  56,  36,  35,  ,  ,
+        MOVE G6B,  63,  50,  10,  ,  ,
+        MOVE G6D, 100,  76, 138, 102, 100,
+        MOVE G6A,  95,  77, 137, 102, 107,
+
+        MOVE G6D, 101,  76, 138, 102,  97,
+        MOVE G6A,  90,  76, 137, 102, 113,
+        MOVE G6C,  68,  58,  35,  ,  ,
+        MOVE G6B,  63,  50,  10,  ,  ,
+
+
+
+        MOVE G6D, 105,  76, 138, 102,  93,
+        MOVE G6A,  86,  76, 137, 102, 120,
+
+        SPEED 8
+
+
+        MOVE G6C, 122,  71,  12,  ,  ,
+        MOVE G6B,  63,  50,  10,  ,  ,
+
+
+        ''************************************
+        SPEED 6
+
+        MOVE G6C, 101, 142,  57,  ,  ,
+        MOVE G6B,  63,  50,  10,  ,  ,190
+
+
+        MOVE G6C, 101, 134,  88,  ,  ,
+        MOVE G6B,  63,  50,  10,  ,  ,
+
+
+        MOVE G6C,  94, 114, 125,  ,  ,
+        MOVE G6B,  63,  50,  10,  ,  ,
+
+
+        MOVE G6C,  95,  99,  90,  ,  ,
+        MOVE G6B,  63,  50,  10,  ,  ,
+
+
+        '****
+        MOVE G6C, 122,  71,  12,  ,  ,
+        MOVE G6B,  63,  50,  10,  ,  ,100
+        MOVE G6D, 101,  76, 138, 102,  97,
+        MOVE G6A,  90,  76, 137, 102, 113,
+
+
+
+        MOVE G6C,  68,  58,  35,  ,  ,
+        MOVE G6B,  63,  50,  10,  ,  ,
+        MOVE G6D, 100,  76, 138, 102, 100,
+        MOVE G6A,  95,  76, 137, 102, 107,
+
+        MOVE G6C,  56,  36,  35,  ,  ,
+        MOVE G6B,  63,  50,  10,  ,  ,
+
+        MOVE G6C,  59,  15,  39,  ,  ,
+        MOVE G6B,  63,  50,  10,  ,  ,
+        MOVE G6D, 100,  76, 138, 102, 100,
+        MOVE G6A, 100,  76, 138, 102, 100,
+
+    NEXT i
+
+    DELAY 200
+    '    '***********************绗簩涓叓鎬?***
+    MOVE G6C,  59,  15,  39,  ,  ,
+    MOVE G6B,  63,  50,  10,  ,  ,
+    MOVE G6D, 100,  76, 138, 102, 100,
+    MOVE G6A, 100,  76, 138, 102, 100,
+    'HIGHSPEED SETOFF
+    SPEED 12
+
+
+
+
+
+    MOVE G6B,  83, 187, 140,  ,  ,
+    MOVE G6C,  83, 187, 140,  ,  ,
+
+    DELAY 350
+    SPEED 6
+    MOVE G6C,  83, 187, 140,  ,  ,
+    MOVE G6A,  98, 129,  26, 161, 104,
+    MOVE G6D,  47,  49, 183,  86, 151,
+    MOVE G6B,  83, 187, 140,  ,  ,  10
+    WAIT
+    MOVE G6A, 103,  78, 137, 111,  96,
+    MOVE G6D,  66,  54, 164, 105, 118,
+    WAIT
+
+    MOVE G6A, 100,  76, 145,  98, 100,
+    MOVE G6D, 100,  76, 145,  98, 100,
+    MOVE G6B,  83, 187, 140,  ,  ,100
+    MOVE G6C,  83, 187, 140,  ,  ,
+    '========================================
+    SPEED 9
+    MOVE G6A, 100,  76, 145,  98, 100,
+    MOVE G6D, 100,  76, 145,  98, 100,
+    MOVE G6B,  83, 131, 140,  ,  ,
+    MOVE G6C,  83, 135, 140,  ,  ,
+
+    MOVE G6A, 100,  76, 145,  98, 100,
+    MOVE G6D,  ,  ,  ,  ,  ,
+    MOVE G6B,  84, 103, 101,  ,  ,
+    MOVE G6C,  84, 105,  96,  ,  ,
+
+
+    MOVE G6A, 100,  76, 145,  98, 100,
+    MOVE G6D, 100,  76, 145,  98, 100,
+    MOVE G6B,  76,  91,  30,  ,  ,
+    MOVE G6C,  68,  81,  40,  ,  ,
+
+
+
+    MOVE G6A, 100,  76, 145,  98, 100,
+    MOVE G6D, 100,  76, 145,  98, 100,
+    MOVE G6B,  54,  55,  11,  ,  ,
+    MOVE G6C,  56,  45,  10,  ,  ,
+
+
+    '
+    '    '******************************disangebapai
+    '
+    SPEED 6
+    MOVE G6A,  93,  96, 111, 107, 109,
+    MOVE G6D,  87,  89, 120, 103, 109,
+    DELAY 200
+
+    SPEED 5
+    MOVE G6A,  99,  96, 111, 107,  82,
+    MOVE G6D,  72,  89, 120, 103, 142,
+
+    WAIT
+
+
+    MOVE G6A,  72,  89, 120, 103, 142,
+    MOVE G6D,  99,  96, 111, 107,  82,
+
+    WAIT
+
+    MOVE G6A,  99,  96, 111, 107,  82,
+    MOVE G6D,  72,  89, 120, 103, 142,
+
+    WAIT
+
+    MOVE G6A,  72,  89, 120, 103, 142,
+    MOVE G6D,  99,  96, 111, 107,  82,
+
+    WAIT
+
+
+
+    MOVE G6A,  99,  96, 111, 107,  82,
+    MOVE G6D,  72,  89, 120, 103, 142,
+    MOVE G6B, 100, 122, 133,  ,  ,
+    MOVE G6C,  97, 131, 124,  ,  ,
+    WAIT
+
+    MOVE G6A,  72,  89, 120, 103, 142,
+    MOVE G6D,  99,  96, 111, 107,  82,
+    MOVE G6B,  61,  51,  71,  ,  ,
+    MOVE G6C,  62,  52,  76,  ,  ,
+    WAIT
+    MOVE G6A,  99,  96, 111, 107,  82,
+    MOVE G6D,  72,  89, 120, 103, 142,
+    MOVE G6B,  52,  26,  50,  ,  ,
+    MOVE G6C,  54,  45,  38,  ,  ,
+    WAIT
+    MOVE G6A,  93,  96, 111, 107, 109,
+    MOVE G6D,  87,  89, 120, 103, 109,
+
+
+    '**********************************
+    '
+    '    SPEED 15
+    '
+    '    MOVE G6B, 100,  44, 188,  ,  ,
+    '    MOVE G6C, 101,  55, 186,  ,  ,
+    '    WAIT
+    '    SPEED 5
+    '
+    '
+    '    MOVE G6A,102,  78, 139,  98, 84
+    '    MOVE G6D,92,  90, 115,  110, 122
+    '    WAIT
+    '
+    '    SPEED 5
+    '    MOVE G6D,108,  92, 119,  106, 99
+    '    MOVE G6A,86,  76, 145,  94, 107
+    '
+    '
+    '
+    '
+    '
+    '    WAIT
+    '
+    '    SPEED 5
+    '
+    '
+    '
+    '
+    '    MOVE G6D, 108,  92, 127,  94,  99,
+    '    MOVE G6A,  89,  86, 141,  87, 107,
+    '
+    '
+    '
+    '
+    '
+    '
+    '
+    '    MOVE G6A,98,  76, 145,  93, 103, 100
+    '    MOVE G6D,98,  76, 145,  93, 103, 100
+    '
+    '
+    '
+    '    DELAY 600
+    '    HIGHSPEED SETON
+    '    SPEED 10
+    '
+    '
+
+    'GOSUB zhanli
+    '********************
+    '    MOVE G6D,  91,  78, 144,  99, 103,
+    '    MOVE G6A, 105,  91, 122, 107, 101,
+    '    MOVE G6C, 102, 102,  10,  ,  ,
+    '    MOVE G6B, 190, 100,  12,  ,  ,
+    '    WAIT
+    '    HIGHSPEED SETOFF
+    '    DELAY 170
+    '    '
+    '    SPEED 15
+    '    MOVE G6A,  91,  78, 144,  99, 103,
+    '    MOVE G6D, 105,  91, 122, 107, 101,
+    '    MOVE G6B, 102, 102,  10,  ,  ,
+    '    MOVE G6C, 190, 100,  12,  ,  ,
+    '    WAIT
+    '
+    '
+    '
+    '    DELAY 170
+    '
+    '
+    '    MOVE G6D,  90,  78, 144,  99, 103,
+    '    MOVE G6A, 105,  91, 122, 107, 101,
+    '    MOVE G6C, 102, 102,  10,  ,  ,
+    '    MOVE G6B, 190, 100,  12,  ,  ,
+    '    WAIT
+    '
+    ' **************************************
+    MOVE G6A, 100,  76, 145,  93, 100,
+    MOVE G6D, 100,  76, 145,  93, 100,
+    MOVE G6B, 100,  30,  80,  ,  ,
+    MOVE G6C, 100,  30,  80,  ,  ,
+    WAIT
+
+    RETURN
+
+chatui:
+    GOSUB Leg_motor_mode3
+
+    'SPEED 13
+    SPEED 8
+ 	MOVE G6A,  78,  90, 111, 118, 107, 
+	MOVE G6D, 111,  98, 100, 125, 105, 
+    MOVE G6C, 190,  30,  50,  ,  ,
+    MOVE G6B, 190,  50, 120,  ,  ,
+    WAIT
+
+
+	SPEED 10 	
+	MOVE G6A,  81,  103,  93, 125, 107,  
+	MOVE G6D, 111,  98, 100, 125, 105,  
+    'SPEED 12
+    SPEED 7
+	MOVE G6A,  78, 131,  38, 154, 111,  
+	MOVE G6D, 111,  98, 100, 125, 105, 
+    MOVE G6B, 190,  95, 100,  ,  ,
+    MOVE G6C, 185,  60,  15,  ,  ,
+    WAIT
+
+    '    SPEED 13
+    SPEED 8
+	MOVE G6A,  81,  103,  93, 125, 107,  
+	MOVE G6D, 111,  98, 100, 125, 105,  
+    MOVE G6B, 190,  95, 100,  ,  ,
+    MOVE G6C, 190,  30,  10,  ,  ,
+    WAIT
+
+    '******************************
+
+
+    SPEED 8
+    'SPEED 13
+    MOVE G6B, 190,  30,  50,  ,  ,
+    MOVE G6C, 190,  50, 120,  ,  ,
+    MOVE G6A, 112,  98, 100, 122, 105, 
+	MOVE G6D,  85,  87, 117, 118, 107,  
+    WAIT
     
+    SPEED 10 
+	      
+	MOVE G6A, 112,  98, 100, 125, 105, 
+	MOVE G6D,  86,  102,  96, 130, 107, 
+    
+    SPEED 7
+    'SPEED 12
+   MOVE G6A, 112,  98, 100, 122, 105, 
+		MOVE G6D,  84, 130,  40, 151, 111, 
+    MOVE G6B, 185,  60,  15,  ,  ,
+    MOVE G6C, 190,  95, 100,  ,  ,
+    WAIT
+    SPEED 8
+    'SPEED 13
+    MOVE G6A, 112,  98, 100, 125, 105, 
+	    MOVE G6D,  86,  102,  96, 130, 107, 
+    MOVE G6B, 190,  30,  10,  ,  ,
+    MOVE G6C, 190,  95, 100,  ,  ,
+    WAIT
+    '*******qqqqqqqqqqqqq********
+       SPEED 8
+ 	MOVE G6A,  78,  90, 111, 118, 107, 
+	MOVE G6D, 111,  98, 100, 125, 105, 
+    MOVE G6C, 190,  30,  50,  ,  ,
+    MOVE G6B, 190,  50, 120,  ,  ,
+    WAIT
+
+
+	SPEED 10 	
+	MOVE G6A,  81,  103,  93, 125, 107,  
+	MOVE G6D, 111,  98, 100, 125, 105,  
+    'SPEED 12
+    SPEED 7
+	MOVE G6A,  78, 131,  38, 154, 111,  
+	MOVE G6D, 111,  98, 100, 125, 105, 
+    MOVE G6B, 190,  95, 100,  ,  ,
+    MOVE G6C, 185,  60,  15,  ,  ,
+    WAIT
+
+    '    SPEED 13
+    SPEED 8
+	MOVE G6A,  81,  103,  93, 125, 107,  
+	MOVE G6D, 111,  98, 100, 125, 105,  
+    MOVE G6B, 190,  95, 100,  ,  ,
+    MOVE G6C, 190,  30,  10,  ,  ,
+    WAIT
+
+    '******************************
+
+
+    SPEED 8
+    'SPEED 13
+    MOVE G6B, 190,  30,  50,  ,  ,
+    MOVE G6C, 190,  50, 120,  ,  ,
+    MOVE G6A, 112,  98, 100, 122, 105, 
+	MOVE G6D,  85,  87, 117, 118, 107,  
+    WAIT
+    
+    SPEED 10 
+	      
+	MOVE G6A, 112,  98, 100, 125, 105, 
+	MOVE G6D,  86,  102,  96, 130, 107, 
+    
+    SPEED 7
+    'SPEED 12
+   MOVE G6A, 112,  98, 100, 122, 105, 
+		MOVE G6D,  84, 130,  40, 151, 111, 
+    MOVE G6B, 185,  60,  15,  ,  ,
+    MOVE G6C, 190,  95, 100,  ,  ,
+    WAIT
+    SPEED 8
+    'SPEED 13
+    MOVE G6A, 112,  98, 100, 125, 105, 
+	    MOVE G6D,  86,  102,  96, 130, 107, 
+    MOVE G6B, 190,  30,  10,  ,  ,
+    MOVE G6C, 190,  95, 100,  ,  ,
+    WAIT
+    GOSUB standard_pose1
+
+    RETURN
+
+niupigu:
+
+    GOSUB Leg_motor_mode3
+
+    SPEED 7
+    FOR J = 1 TO 2
+        MOVE G6A,  99,  96, 111, 107,  82,
+        MOVE G6D,  72,  89, 120, 103, 142,
+        MOVE G6B, 187,  18,  29,  ,  ,
+        MOVE G6C, 190,  25,  10,  ,  ,
+        WAIT
+
+        MOVE G6D,  99,  96, 111, 107,  82,
+        MOVE G6A,  72,  89, 120, 103, 142,
+        MOVE G6B, 187,  18,  29,  ,  ,
+        MOVE G6C, 190,  25,  10,  ,  ,
+        WAIT
+    NEXT J
+    MOVE G6A,  99,  96, 111, 107,  82,
+    MOVE G6D,  72,  89, 120, 103, 142,
+    MOVE G6B, 187,  18,  29,  ,  ,
+    MOVE G6C, 190,  25,  10,  ,  ,
+    WAIT
+
+    RETURN
+
+chatui1:
+    GOSUB Leg_motor_mode3
+    SPEED 13
+    MOVE G6A,95,  96, 145,  73, 105, 100
+    MOVE G6D,95,  56, 145,  113, 105, 100
+    MOVE G6C, 190,  30,  50,  ,  ,
+    MOVE G6B, 190,  50, 120,  ,  ,
+    WAIT
+
+    SPEED 12
+    MOVE G6A,93,  96, 145,  73, 105, 100
+    MOVE G6D,93,  56, 145,  113, 105, 100
+    MOVE G6B, 190,  95, 100,  ,  ,
+    MOVE G6C, 185,  60,  15,  ,  ,
+    WAIT
+
+    SPEED 13
+    MOVE G6A,  97,  76, 146,  93, 102,
+    MOVE G6D,  98,  76, 146,  93, 102,
+    MOVE G6B, 190,  95, 100,  ,  ,
+    MOVE G6C, 190,  30,  10,  ,  ,
+    WAIT
+    SPEED 13
+    MOVE G6A,95,  56, 145,  113, 105, 100
+    MOVE G6D,95,  96, 145,  73, 105, 100
+    MOVE G6B, 190,  30,  50,  ,  ,
+    MOVE G6C, 190,  50, 120,  ,  ,
+    WAIT
+
+    SPEED 12
+    MOVE G6A,93,  56, 145,  113, 105, 100
+    MOVE G6D,93,  96, 145,  73, 105, 100
+    MOVE G6B, 185,  60,  15,  ,  ,
+    MOVE G6C, 190,  95, 100,  ,  ,
+    WAIT
+
+    SPEED 13
+    MOVE G6A,  97,  76, 146,  93, 102,
+    MOVE G6D,  98,  76, 146,  93, 102,
+    MOVE G6B, 190,  30,  10,  ,  ,
+    MOVE G6C, 190,  95, 100,  ,  ,
+    WAIT
+    SPEED 13
+    MOVE G6A,95,  96, 145,  73, 105, 100
+    MOVE G6D,95,  56, 145,  113, 105, 100
+    MOVE G6C, 190,  30,  50,  ,  ,
+    MOVE G6B, 190,  50, 120,  ,  ,
+    WAIT
+
+    SPEED 12
+    MOVE G6A,93,  96, 145,  73, 105, 100
+    MOVE G6D,93,  56, 145,  113, 105, 100
+    MOVE G6B, 190,  95, 100,  ,  ,
+    MOVE G6C, 185,  60,  15,  ,  ,
+    MOVE G6C, 190,  20,  10,  ,  ,
+    WAIT
+
+    SPEED 13
+    MOVE G6A,  97,  76, 146,  93, 102,
+    MOVE G6D,  98,  76, 146,  93, 102,
+    MOVE G6B, 190,  95, 100,  ,  ,
+    MOVE G6C, 190,  30,  10,  ,  ,
+    WAIT
+    SPEED 13
+    MOVE G6A,95,  56, 145,  113, 105, 100
+    MOVE G6D,95,  96, 145,  73, 105, 100
+    MOVE G6B, 190,  30,  50,  ,  ,
+    MOVE G6C, 190,  50, 120,  ,  ,
+    WAIT
+
+    SPEED 12
+    MOVE G6A,93,  56, 145,  113, 105, 100
+    MOVE G6D,93,  96, 145,  73, 105, 100
+    MOVE G6B, 185,  60,  15,  ,  ,
+    MOVE G6B, 190,  20,  10,  ,  ,
+    MOVE G6C, 190,  95, 100,  ,  ,
+    WAIT
+
+    SPEED 13
+    MOVE G6A,101,  76, 146,  93, 98, 100
+    MOVE G6D,101,  76, 146,  93, 98, 100
+    MOVE G6B, 190,  30,  10,  ,  ,
+    MOVE G6C, 190,  95, 100,  ,  ,
+    WAIT
+
+standard_pose1:
+
+    MOVE G6A,  95,  76, 145,  93, 105,
+    MOVE G6D,  95,  76, 145,  93, 105,
+    MOVE G6B,100,  30,  100, 60, 100, 100
+    MOVE G6C,100,  30,  100, 60, 100, 100
+    WAIT
+
+    pose = 0
+
+    RETURN
+
+Recover:
+    MOVE G6A, 100,  76, 145,  93, 100,
+    MOVE G6D, 100,  76, 145,  93, 100,
+    MOVE G6B, 144,  59,  80,  ,  ,
+    MOVE G6C, 142,  72,  73,  ,  ,
+    WAIT
+    RETURN
+
+BeforeLast1:
+    '+2
+    '    SPEED 7
+    '
+    '    '
+    '    '    MOVE G6A,  98, 129,  26, 161, 104,
+    '    '    MOVE G6D,  46,  61, 164,  89, 156,
+    '    '    MOVE G6B, 103,  16,  91,  ,  ,
+    '    '    MOVE G6C,  75,  46,  94,  ,  ,
+    '    '
+    '    '
+    '    '    SPEED 7
+    '    '    MOVE G6B, 105,  18, 187,  ,  ,
+    '    '    MOVE G6C,  75,  46,  94,  ,  ,
+    '    '    WAIT
+    '
+    '
+    '    MOVE G6A, 103,  78, 137, 111,  96,
+    '    MOVE G6D,  66,  54, 164, 105, 118,
+    '    MOVE G6C,  75,  46,  94,  ,  ,
+    '    MOVE G6B, 105,  98, 187,  ,  ,
+    '    WAIT
+    '
+    '    '
+    '    '    SPEED 10
+    '
+    '
+    '
+    '
+    '    MOVE G6A, 103,  78, 137, 111,  96,
+    '    MOVE G6B, 105, 188,  92,  ,  ,  60
+    '    MOVE G6D,  76,  54, 166, 103, 118,
+    '
+    '    WAIT
+    '
+    '    SPEED 8
+    '    MOVE G6B, 81, 188,  105,  ,  ,  70
+    '    MOVE G6C,  83, 81,  103,  ,  ,
+    '
+    '    WAIT
+    '
+    '    SPEED 7
+    '    MOVE G6B, 58, 188,  118,  ,  ,  80
+    '    MOVE G6C,  91,  116,  112,  ,  ,
+    '
+    '    WAIT
+    '
+    '    SPEED 7
+    '    MOVE G6B, 35, 188,  131,  ,  ,  90
+    '    MOVE G6C,  99,  151,  120,  ,  ,
+    '
+    '    WAIT
+    '
+    '    SPEED 6
+    '
+    '    MOVE G6B,  12, 188, 151,  ,  , 100
+    '    MOVE G6C, 109, 190, 144,  ,  ,
+    '
+    '    WAIT
+    '    DELAY 550
+    SPEED 10
+    MOVE G6A, 100,  60, 176,  75, 102,
+    MOVE G6D, 100,  60, 176,  75, 102,
+    MOVE G6B, 100,  30,  80,  ,  ,
+    MOVE G6C, 100,  30,  80,  ,  ,
+    WAIT
 
     RETURN
