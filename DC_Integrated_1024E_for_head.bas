@@ -10746,8 +10746,8 @@ donation_ceremony_2_1:
 		'MOVE G6B,  99, 182, 131,  ,  ,  
 		'MOVE G6C,  97, 173, 106,  ,  ,
 
-		MOVE G6A, 109, 107,  84, 130, 111,  
-		MOVE G6D,  61,  65, 138, 111, 107,  
+		MOVE G6A, 109, 107,  84, 135, 111,  
+		MOVE G6D,  61,  75, 138, 116, 107,  
 		MOVE G6B,  99, 187, 139,  ,  ,  
 		MOVE G6C,  99, 187, 139,  ,  ,  
 
@@ -10772,8 +10772,8 @@ donation_ceremony_2_1:
 		'MOVE G6C,  99, 182, 131,  ,  ,  
 		'MOVE G6B,  97, 173, 106,  ,  ,  
 		
-		MOVE G6A,  61,  65, 138, 111, 107,  
-		MOVE G6D, 109, 107,  84, 130, 111,  
+		MOVE G6A,  61,  71, 138, 116, 107,  
+		MOVE G6D, 109, 107,  84, 135, 111,  
 		MOVE G6B,  99, 187, 139,  ,  ,  
 		MOVE G6C,  99, 187, 139,  ,  ,  
 
@@ -11462,7 +11462,7 @@ daybyday:
 
     'GOSUB Recover
     'GOSUB BeforeLast1
-	GOSUB bow_2
+	GOSUB feitian
     'GOSUB Zhanghaipengpose
 
     RETURN
@@ -11848,7 +11848,7 @@ chatui:
 
     SPEED 8
     'SPEED 13
-    MOVE G6B, 190,  30,  50,  ,  ,
+    MOVE G6B, 190,  30,  50,  ,  ,	
     MOVE G6C, 190,  50, 120,  ,  ,
   '  MOVE G6A, 112,  98, 100, 122, 105, 
 '	MOVE G6D,  85,  87, 117, 118, 107,  
@@ -12134,3 +12134,43 @@ BeforeLast1:
     WAIT
 
     RETURN
+
+feitian:
+    GOSUB Leg_motor_mode3
+
+    ' stand
+    MOVE G6A,100,  76, 145,  93, 100, 100
+    MOVE G6D,100,  76, 145,  93, 100, 100
+    WAIT
+    
+    DELAY 100
+
+    SPEED 6
+    ' tall stand
+    MOVE G6D, 100,  60, 176,  75, 102,
+    MOVE G6A, 100,  60, 176,  75, 102,
+    WAIT
+
+    SPEED 8
+
+    ' move center of gravity to right leg
+    MOVE G6D,  88,  60, 176,  75, 110,
+    MOVE G6A, 108,  60, 176,  75,  94,
+    WAIT
+
+    ' uplift the left leg
+    MOVE G6D,  92,  75,  96, 107, 112,
+    MOVE G6A, 113,  60, 176,  75,  96,
+    MOVE G6C, 100,  30,  80,  ,  ,
+    MOVE G6B, 100,  30,  80,  ,  ,
+    WAIT
+
+    ' feitian pose
+	
+	MOVE G6A, 110,  60, 176,  98,  96,  
+	MOVE G6D,  78,  10, 140,  13, 122,  
+	MOVE G6B, 143, 190, 138,  ,  , 70
+	MOVE G6C, 148, 188, 150,  ,  ,  
+	WAIT
+
+	RETURN

@@ -3002,6 +3002,54 @@ bow_2:
     RETURN
     '************************************************
 
+bow_2_still:
+    GOSUB All_motor_mode3
+    SPEED 4
+    MOVE G6A, 108,  76, 146,  93,  94
+    MOVE G6D,  88,  71, 152,  91, 110
+    MOVE G6B,110,  30,  80
+    MOVE G6C,90,  30,  80
+    WAIT
+
+    SPEED 8
+    MOVE G6D, 90, 95, 115, 105, 112
+    MOVE G6A,113,  76, 146,  93,  94
+    MOVE G6B,130,  30,  80
+    MOVE G6C,75,  30,  80
+    WAIT
+
+    SPEED 8
+    MOVE G6A,112,  86, 120, 120,  94
+    MOVE G6D,90, 100, 155,  71, 112
+    MOVE G6B,140,  30,  80
+    MOVE G6C,70,  30,  80
+    WAIT
+
+
+    SPEED 10
+    MOVE G6A,108,  85, 110, 140,  94
+    MOVE G6D,85, 97, 145,  91, 112
+    MOVE G6B,150,  20,  40
+    MOVE G6C,60,  30,  80
+    WAIT
+
+    DELAY 1000
+    '*******************
+    GOSUB leg_motor_mode2
+    SPEED 6
+    MOVE G6D, 90, 95, 115, 105, 110
+    MOVE G6A,114,  76, 146,  93,  96
+    MOVE G6B,130,  30,  80
+    MOVE G6C,75,  30,  80
+    WAIT
+
+    SPEED 8
+    MOVE G6A, 108,  76, 146,  93,  94
+    MOVE G6D,  88,  71, 152,  91, 110
+    MOVE G6B,110,  30,  80
+    MOVE G6C,90,  30,  80
+    WAIT
+    RETURN
 
 bow_3:
     GOSUB All_motor_mode3
@@ -11309,7 +11357,7 @@ daybyday:
 
     'GOSUB Recover
     'GOSUB BeforeLast1
-	GOSUB bow_2
+	GOSUB bow_2_still
     'GOSUB Zhanghaipengpose
 
     RETURN
